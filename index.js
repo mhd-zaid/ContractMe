@@ -39,7 +39,7 @@ app.use('/contract/:id', (req, response) => {
       pdf.create(html).toStream(function(err, res){
         if (err) return console.log(err);
         response.setHeader('Content-Type', 'application/pdf');
-        response.setHeader('Content-Disposition', 'inline; filename=Devis.pdf');
+        response.setHeader('Content-Disposition', 'inline; filename=contrat-'+data.nom+'-'+data.prenom+'.pdf');
         res.pipe(response);
       });
     } else {

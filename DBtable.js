@@ -22,7 +22,7 @@ Contrat.init({
         type: DataTypes.STRING
     },
     date_de_naissance: {
-        type: DataTypes.DATE
+        type: DataTypes.DATEONLY
     },
     lieu_de_naissance:{
         type:DataTypes.STRING
@@ -34,10 +34,10 @@ Contrat.init({
         type: DataTypes.INTEGER
     },
     date_de_debut: {
-        type: DataTypes.DATE
+        type: DataTypes.DATEONLY
     },
     date_edition: {
-        type: DataTypes.DATE
+        type: DataTypes.DATEONLY
     },
     salaire_brut: {
         type: DataTypes.DOUBLE

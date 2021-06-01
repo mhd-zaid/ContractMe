@@ -25,6 +25,13 @@ app.post('/contract', (req, res) => {
     res.json(data);
   })
 })
+app.use('/contract/:id', (req, res) => {
+  Contrat.findOne({where:{
+    id:req.params.id
+  }}).then((data) => {
+    res.json(data);
+  })
+})
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })

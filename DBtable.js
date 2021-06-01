@@ -15,11 +15,6 @@ try {
 
 class Contrat extends Model { }
 Contrat.init({
-    idContrat: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        autoIncrementIdentity: true
-    },
     prenom: {
         type: DataTypes.STRING,
     },

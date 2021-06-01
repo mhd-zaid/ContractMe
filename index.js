@@ -21,7 +21,7 @@ app.post('/contract', (req, res) => {
   // connexion a la base 
   //insertion des infos
   //gerer la reponse
-  Contrat.create(mockContract).then((data) => {
+  Contrat.create(req.body).then((data) => {
     res.json(data);
   })
 })

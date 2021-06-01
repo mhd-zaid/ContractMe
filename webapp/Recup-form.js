@@ -1,16 +1,33 @@
-var markers = [{ "position": "128.3657142857143", "markerPosition": "7" },
-               { "position": "235.1944023323615", "markerPosition": "19" },
-               { "position": "42.5978231292517", "markerPosition": "-3" }];
+$(document).ready(function () {
+    $('#btn').click((e) => {
+        e.preventDefault();
+        var contract = {
+            nom: $("#nom").val(),
+            prenom: $("#prenom").val(),
+            date_de_naissance: $("#DN").val(),
+            lieu_de_naissance: $("#LN").val(),
 
-$.ajax({
-    type: "POST",
-    url: "/webservices/PodcastService.asmx/CreateMarkers",
-    // The key needs to match your method's input parameter (case-sensitive).
-    data: JSON.stringify({ Markers: markers }),
-    contentType: "application/json; charset=utf-8",
-    dataType: "json",
-    success: function(data){alert(data);},
-    error: function(errMsg) {
-        alert(errMsg);
-    }
-});
+            address: $("#AD").val(),
+            secu: $("#NS").val(),
+            date_de_debut: $("#DD").val(),
+            date_edition: $("#DE").val(),
+            salaire_brut: $("#SB").val(),
+            statut: $("#ST").val(),
+            position_coeff: $("#PC").val(),
+        }
+        console.log(contract);
+
+        var jqxhr = $.ajax("/contract", {
+            type: "POST",
+            data: JSON.stringify(contract),
+            contentType:"application/json",
+            dataType: 'json'
+        })
+            .done(function () {
+                alert("success");
+            })
+            .fail(function () {
+                alert("error");
+            })
+    });
+})

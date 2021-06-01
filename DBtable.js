@@ -24,6 +24,9 @@ Contrat.init({
     date_de_naissance: {
         type: DataTypes.DATE
     },
+    lieu_de_naissance:{
+        type:DataTypes.STRING
+    },
     address: {
         type: DataTypes.STRING
     },

@@ -31,7 +31,7 @@ Contrat.init({
         type: DataTypes.STRING
     },
     secu: {
-        type: DataTypes.INTEGER
+        type: DataTypes.BIGINT
     },
     date_de_debut: {
         type: DataTypes.DATEONLY

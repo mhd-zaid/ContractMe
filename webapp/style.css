@@ -11,9 +11,13 @@ body{
     padding: 10px;
 }
 
+#CVL{
+    width: 200px;
+}
+
 h1{
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 #name{
@@ -22,14 +26,11 @@ h1{
 
 #Pr{
     margin-left: 30px;
+    width: 230px;
 }
 
-#vr{
-    display: flex;
-}
-
-#rg{
-    margin-left: 30px;
+#VL{
+    width: 300px;
 }
 
 #cpp{
@@ -46,4 +47,20 @@ h1{
 
 #de{
     margin-left: 30px;  
+}
+
+#NT{
+    width: 300px;
+}
+
+.button{
+    display: flex;
+}
+
+#btn-s{
+    margin-left: 150px;
+}
+
+#btn-e{
+    margin-left: 200px;
 }

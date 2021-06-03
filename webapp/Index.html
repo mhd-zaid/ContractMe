@@ -19,9 +19,15 @@
         <div class="container">
 
             <div class ="form-group">
-                <label for ="NS" class="form-label">N° Sécurité sociale</label>
-                <input type="text" class="form-control" id="NS" placeholder="Veuillez saisir votre n° de sécurité social" required>
-            </div><br>
+                <div id="CVL">
+                    <label for ="CVL" class="form-label">Civilité</label>
+                        <select class="form-select" aria-label="Default select example" required>
+                            <option selected disabled value="">Choisissez...</option>
+                            <option value="1">Monsieur</option>
+                            <option value="2">Madame</option>
+                    </select>
+                </div>
+            </div><br>    
             
             <div id ="name">
                 <div class ="form-group">
@@ -47,19 +53,13 @@
                 <input type="text" class="form-control" id="AD" placeholder="Complément d'adresse" required>
             </div><br>
 
-            <div id="vr">
-                <div class ="form-group">
+            <div class ="form-group">
+                <div id="VL">
                     <label for ="AD" class="form-label"></label>
                     <input type="text" class="form-control" id="AD" placeholder="Ville" required>
-                </div><br>
-
-                <div id="rg">
-                    <div class ="form-group">
-                        <label for ="AD" class="form-label"></label>
-                        <input type="text" class="form-control" id="AD" placeholder="Region" required>
-                    </div><br>
-                </div>    
-            </div>
+                </div>
+                
+            </div><br>
             
             <div id="cpp">
                 <div class ="form-group">
@@ -74,7 +74,6 @@
                     </div><br>
                 </div>    
             </div> 
-
                        
             <div class ="form-group">
                 <label for ="DN" class="form-label">Date de naissance</label>
@@ -83,7 +82,7 @@
 
             <div class ="form-group">
                 <label for ="LN" class="form-label">Lieu de naissance</label>
-                <select class="selectpicker countrypicker" data-live-search="true" required></select>
+                <input type="text" class="form-control" id="LN" placeholder="Exemple Paris" required>
             </div><br> 
 
            <div id="dde">
@@ -99,10 +98,21 @@
                     </div><br>
                 </div>    
            </div>
-          
+
            <div class ="form-group">
-                <label for ="SB" class="form-label">Salaire brut</label>
-                <input type="text" class="form-control" id="SB" placeholder="Quel est votre salaire brut" required>
+                <label for ="NT" class="form-label">Nationalilté</label>
+                <input type="text" class="form-control" id="NT" placeholder="Exemple: France" required>
+           </div><br>
+           
+           <div class ="form-group">
+                <label for ="NS" class="form-label">N° Sécurité sociale</label>
+                <input type="text" class="form-control" id="NS" placeholder="Veuillez saisir votre n° de sécurité social" required>
+          </div><br><br>
+
+           <div class = "input-group form-group">
+                <span class="input-group-text">$</span>
+                <!--label for ="SB" class="form-label">Salaire brut</label-->
+                <input type="text" class="form-control" id="SB" aria-label="Amount (to the nearest dollar)" placeholder="Quel est votre salaire brut" required>
            </div><br>
           
            <div class ="form-group">
@@ -114,11 +124,13 @@
                 <label for ="PC" class="form-label">Position / Coeff</label>
                 <input type="text" class="form-control" id="PC" placeholder="Position/ Coeff" required>
            </div><br>
-
-           <button class="btn btn-primary" type="submit">Enregistrer</button>
+           
+           <div id="button">
+                <span id="btn-s"><button class="btn btn-primary" type="submit">Soumettre</button></span>
+                <span id="btn-e"><button class="btn btn-danger" onclick="window.location='index.html';" type="submit">Effacer</button></span>
+           </div>
         </div>
     </div>   
-
        </form>
 
     </body>

@@ -1,0 +1,13 @@
+
+cache:
+  paths:
+    - node_modules/
+
+test_async:
+  script:
+    - rm -rf /var/www/CONTRACT
+    - mkdir -m 777 -p /var/www/CONTRACT
+    - cp -r ./ /var/www/CONTRACT
+    - cd /var/www/CONTRACT &&  npm install
+    
+

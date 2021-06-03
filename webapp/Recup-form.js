@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#btn').click((e) => {
+    $('#btn-s').click((e) => {
         e.preventDefault();
         var contract = {
             nom: $("#nom").val(),

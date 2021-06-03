@@ -1,5 +1,5 @@
 body{
-    background-color: silver;
+    background-color:red;
 }
 
 #page{
@@ -7,12 +7,13 @@ body{
     margin: auto;
     border: 2px solid silver;
     border-radius: 5px;
-    box-shadow: 3px 3px 3px black;
+    box-shadow: 3px 3px 3px 3px silver;
     padding: 10px;
 }
 
 h1{
     text-align: center;
+    padding: 10px;
 }
 
 #name{

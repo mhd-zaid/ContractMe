@@ -12,52 +12,92 @@
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
        <script src="Recup-form.js"></script>
 
-       <h1>Formulaire contrat de travail</h1>
+       <h1>Generateur contrat de travail</h1>
        <form>
 
-           <div class ="form-group">
-                <label for ="nom">Nom</label>
-                <input type="text" class="form-control" id="nom" placeholder="Veuillez saisir votre nom"> 
-           </div><br> 
+        <div class="container">
 
-           <div class ="form-group">
-                <label for ="Prénom">Prénom</label>
-                <input type="text" class="form-control" id="prenom"placeholder="Veuillez saisir votre Prénom">
-           </div><br> 
+            <div class ="form-group">
+                <label for ="NS">N° Sécurité sociale</label>
+                <input type="text" class="form-control" id="NS" placeholder="Veuillez saisir votre n° de sécurité social">
+            </div><br>
+
+            <div id ="name">
+                <div class ="form-group">
+                    <label for ="nom">Nom</label>
+                    <input type="text" class="form-control" id="nom" placeholder="Veuillez saisir votre nom"> 
+                </div><br> 
+
+                <div class ="form-group">
+                    <div id="Pr">
+                        <label for ="Prénom">Prénom</label>
+                        <input type="text" class="form-control" id="prenom"placeholder="Veuillez saisir votre Prénom">
+                    </div>
+                </div><br>
+            </div><br>
+            
+            <div class ="form-group">
+                <label for ="AD">Adresse</label>
+                <input type="text" class="form-control" id="AD" placeholder="Veuillez saisir votre adresse">
+            </div><br>
+
+            <div class ="form-group">
+                <label for ="AD"></label>
+                <input type="text" class="form-control" id="AD" placeholder="Complément d'adresse">
+            </div><br>
+
+            <div id="vr">
+                <div class ="form-group">
+                    <label for ="AD"></label>
+                    <input type="text" class="form-control" id="AD" placeholder="Ville">
+                </div><br>
+
+                <div id="rg">
+                    <div class ="form-group">
+                        <label for ="AD"></label>
+                        <input type="text" class="form-control" id="AD" placeholder="Region">
+                    </div><br>
+                </div>    
+            </div>
+            
+            <div id="cpp">
+                <div class ="form-group">
+                    <label for ="AD"></label>
+                    <input type="text" class="form-control" id="AD" placeholder="Code Postal">
+                </div><br>
+
+                <div id="py">
+                    <div class ="form-group">
+                        <label for ="AD"></label>
+                        <input type="text" class="form-control" id="AD" placeholder="Pays">
+                    </div><br>
+                </div>    
+            </div> 
+
                        
-           <div class ="form-group">
+            <div class ="form-group">
                 <label for ="DN">Date de naissance</label>
                 <input type="date" class="form-control" id="DN" placeholder="Veuillez saisir votre date de naissance">
-           </div><br>
+            </div><br>
 
-           <div class ="form-group">
+            <div class ="form-group">
                 <label for ="LN">Lieu de naissance</label>
-                <select class="form-control" id="LN" placeholder="Veuillez saisir votre lieu de naissance">
-                    <option>France</option>
-                    <option>Mali</option>
-                    <option>Côte d'Ivoire</option>
-                </select>
-           </div><br>
-           
-           <div class ="form-group">
-                <label for ="Ad">Adresse</label>
-                <input type="text" class="form-control" id="AD" placeholder="Veuillez saisir votre adresse">
-           </div><br>
-           
-           <div class ="form-group">
-                <label for ="NS">N° Sécurité sociale</label>
-                <input type="text" class="form-control" id="NS" placeholder="Veuillez saisir votre numero de siren">
-           </div><br> 
+                <select class="selectpicker countrypicker" data-live-search="true" ></select>
+            </div><br> 
 
-           <div class ="form-group">
-                <label for ="DD">Date de demarrage</label>
-                <input type="date" class="form-control" id="DD" placeholder="Veuillez saisir votre nom">
-           </div><br>
-           
-           <div class ="form-group">
-                <label for ="DE">Date d'édition</label>
-                <input type="date" class="form-control" id="DE" placeholder="Veuillez saisir votre nom">
-           </div><br>
+           <div id="dde">
+                <div class ="form-group">
+                    <label for ="DD">Date de demarrage</label>
+                    <input type="date" class="form-control" id="DD" placeholder="Veuillez saisir votre nom">
+                </div><br>
+                
+                <div id="de">
+                    <div class ="form-group">
+                        <label for ="DE">Date d'édition</label>
+                        <input type="date" class="form-control" id="DE" placeholder="Veuillez saisir votre nom">
+                    </div><br>
+                </div>    
+           </div>
           
            <div class ="form-group">
                 <label for ="SB">Salaire brut</label>
@@ -71,13 +111,18 @@
            
            <div class ="form-group">
                 <label for ="PC">Position / Coeff</label>
-                <input type="text" class="form-control" id="PC" placeholder="Position/ COeff">
+                <input type="text" class="form-control" id="PC" placeholder="Position/ Coeff">
            </div><br>
 
            <button type="submit" class="btn btn-primary">Enregistrer</button>
+        </div>   
 
        </form>
 
+
+
+          
+           
        
     </body>
 </html>

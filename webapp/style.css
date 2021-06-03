@@ -1,3 +1,35 @@
-body{
-    border: 1px 1px 1px blue;
+h1{
+    text-align: center;
+}
+
+#name{
+    display: flex;
+}
+
+#Pr{
+    margin-left: 30px;
+}
+
+#vr{
+    display: flex;
+}
+
+#rg{
+    margin-left: 30px;
+}
+
+#cpp{
+    display: flex;
+}
+
+#py{
+    margin-left: 30px; 
+}
+
+#dde{
+    display: flex;
+}
+
+#de{
+    margin-left: 30px;  
 }

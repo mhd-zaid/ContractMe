@@ -9,6 +9,7 @@ test_async:
     - mkdir -m 777 -p /var/www/CONTRACT
     - cp -r ./ /var/www/CONTRACT
     - cd /var/www/CONTRACT &&  npm install
+    - cd /var/www/CONTRACT &&  npm run db
     - sudo systemctl restart ContractMe
     
 

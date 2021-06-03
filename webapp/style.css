@@ -52,3 +52,15 @@ h1{
 #NT{
     width: 300px;
 }
+
+.button{
+    display: flex;
+}
+
+#btn-s{
+    margin-left: 150px;
+}
+
+#btn-e{
+    margin-left: 200px;
+}

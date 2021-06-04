@@ -39,7 +39,10 @@ router.get('/contract/:id', (req, response) => {
       html = html.replace('{DE}', (new Date(data.date_edition)).toLocaleDateString())
       html = html.replace('{SB}', data.salaire_brut)
       html = html.replace('{ST}', data.statut)
-      html = html.replace('{PC}', data.position_coeff)
+      html = html.replace('{P}', data.position)
+      html = html.replace('{C}', data.coefficient)
+      html = html.replace('{civilité}',data.civilite)
+      html = html.replace('{N}',data.nationalite)
       console.log(path.resolve("./htmls/logo.png"))
       html = html.replace('{LOGO}', path.resolve("./htmls/logo.png"))
       pdf.create(html, { format: 'A4' }).toStream(function (err, res) {

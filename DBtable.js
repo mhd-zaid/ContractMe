@@ -1,7 +1,7 @@
 const { Sequelize, Model, DataTypes } = require('sequelize');
 
 // Option 2: Passing parameters separately (other dialects)
-const sequelize = new Sequelize('contrat', 'root', 'rootroot', {
+const sequelize = new Sequelize('contrat', 'root', '1234', {
     host: 'localhost',
     dialect: 'mysql'
 });
@@ -45,7 +45,16 @@ Contrat.init({
     statut: {
         type: DataTypes.STRING
     },
-    position_coeff: {
+    position: {
+        type: DataTypes.STRING
+    },
+    coefficient: {
+        type: DataTypes.STRING
+    },
+    civilite:{
+        type: DataTypes.STRING
+    },
+    nationalite:{
         type: DataTypes.STRING
     },
 

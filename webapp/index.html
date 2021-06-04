@@ -21,7 +21,7 @@
             <div class ="form-group">
                 <div id="CVL">
                     <label for ="CVL" class="form-label">Civilité</label>
-                        <select class="form-select" aria-label="Default select example" required>
+                        <select class="form-select" id="CVL" aria-label="Default select example" required>
                             <option selected disabled value="">Choisissez...</option>
                             <option value="1">Monsieur</option>
                             <option value="2">Madame</option>
@@ -50,13 +50,13 @@
 
             <div class ="form-group">
                 <label for ="AD" class="form-label"></label>
-                <input type="text" class="form-control" id="AD" placeholder="Complément d'adresse" required>
+                <input type="text" class="form-control" id="AD" placeholder="Complément d'adresse">
             </div><br>
 
             <div class ="form-group">
                 <div id="VL">
                     <label for ="AD" class="form-label"></label>
-                    <input type="text" class="form-control" id="AD" placeholder="Ville" required>
+                    <input type="text" class="form-control" id="VL" placeholder="Ville" required>
                 </div>
                 
             </div><br>
@@ -64,13 +64,13 @@
             <div id="cpp">
                 <div class ="form-group">
                     <label for ="AD" class="form-label"></label>
-                    <input type="text" class="form-control" id="AD" placeholder="Code Postal" required>
+                    <input type="text" class="form-control" id="CP" placeholder="Code Postal" required>
                 </div><br>
 
                 <div id="py">
                     <div class ="form-group">
                         <label for ="AD" class="form-label"></label>
-                        <input type="text" class="form-control" id="AD" placeholder="Pays" required>
+                        <input type="text" class="form-control" id="PY" placeholder="Pays" required>
                     </div><br>
                 </div>    
             </div> 
@@ -116,14 +116,29 @@
            </div><br>
           
            <div class ="form-group">
-                <label for ="ST" class="form-label">Statut</label>
-                <input type="text" class="form-control" id="ST" placeholder="Quel est votre statut" required>
+                <div id="STT">
+                    <label for ="ST" class="form-label">Statut</label>
+                    <select class="form-select" id="ST" aria-label="Default select example" required>
+                        <option selected disabled value="">Choisissez...</option>
+                        <option value="1">Cadre</option>
+                        <option value="2">Non cadre</option>
+                    </select>
+                </div>    
            </div><br>
            
-           <div class ="form-group">
-                <label for ="PC" class="form-label">Position / Coeff</label>
-                <input type="text" class="form-control" id="PC" placeholder="Position/ Coeff" required>
-           </div><br>
+           <div id="PC">
+                <div class ="form-group">
+                    <label for ="P" class="form-label">Position</label>
+                    <input type="text" class="form-control" id="P" placeholder="Veuillez saisir votre position" required>
+                </div><br>
+                
+                <div id="Coef">
+                    <div class ="form-group">
+                        <label for ="C" class="form-label">Coefficient</label>
+                        <input type="text" class="form-control" id="C" placeholder="Veuillez saisir votre c oefficient" required>
+                    </div><br>
+                </div>
+            </div><br>
            
            <div id="button">
                 <span id="btn-s"><button class="btn btn-primary" >Soumettre</button></span>

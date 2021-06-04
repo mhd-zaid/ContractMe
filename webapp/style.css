@@ -53,14 +53,31 @@ h1{
     width: 300px;
 }
 
+#STT{
+    width: 200px;
+}
+
+#PC{
+    display: flex;
+}
+
+#P{
+    width: 250px;
+}
+
+#Coef{
+    margin-left: 50px;
+    width: 250px;
+}
+
 .button{
     display: flex;
 }
 
 #btn-s{
-    margin-left: 150px;
+    margin-left: 100px;
 }
 
 #btn-e{
-    margin-left: 200px;
+    margin-left: 300px;
 }

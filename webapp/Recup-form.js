@@ -7,13 +7,16 @@ $(document).ready(function () {
             date_de_naissance: $("#DN").val(),
             lieu_de_naissance: $("#LN").val(),
 
-            address: $("#AD").val(),
+            address: $("#AD").val()+" " + $("VL").val()+ ", " + ("CP").val()+ ", " + ("PY").val(),
             secu: $("#NS").val(),
             date_de_debut: $("#DD").val(),
             date_edition: $("#DE").val(),
             salaire_brut: $("#SB").val(),
             statut: $("#ST").val(),
-            position_coeff: $("#PC").val(),
+            position: $("#P").val(),
+            coefficient: $("#C").val(),
+            civilite: $("CVL").val(),
+            nationalite: $("NT").val(),
         }
         console.log(contract);
 

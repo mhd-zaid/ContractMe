@@ -45,7 +45,16 @@ Contrat.init({
     statut: {
         type: DataTypes.STRING
     },
-    position_coeff: {
+    position: {
+        type: DataTypes.STRING
+    },
+    coefficient: {
+        type: DataTypes.STRING
+    },
+    civilite:{
+        type: DataTypes.STRING
+    },
+    nationalite:{
         type: DataTypes.STRING
     },
 

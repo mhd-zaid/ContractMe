@@ -41,11 +41,16 @@ router.get('/contract/:id', (req, response) => {
       html = html.replace('{ST}', data.statut)
       html = html.replace('{P}', data.position)
       html = html.replace('{C}', data.coefficient)
-      html = html.replace('{civilité}',data.civilite)
-      html = html.replace('{N}',data.nationalite)
+      html = html.replace('{civilité}', data.civilite)
+      html = html.replace('{N}', data.nationalite)
       console.log(path.resolve("./htmls/logo.png"))
       html = html.replace('{LOGO}', path.resolve("./htmls/logo.png"))
-      pdf.create(html, { format: 'A4' }).toStream(function (err, res) {
+      pdf.create(html, {
+        format: 'A4',
+        width: "23.3cm",
+        height: "29.7cm",
+        border:{top:'0px',bottom:'0px',left:'0px',right:0}
+      }).toStream(function (err, res) {
         if (err) return console.log(err);
         response.setHeader('Content-Type', 'application/pdf');
         response.setHeader('Content-Disposition', 'inline; filename=contrat-' + data.nom + '-' + data.prenom + '.pdf');

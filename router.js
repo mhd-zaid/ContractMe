@@ -43,6 +43,8 @@ router.get('/contract/:id', (req, response) => {
       html = html.replace('{C}', data.coefficient)
       html = html.replace('{civilité}', data.civilite)
       html = html.replace('{N}', data.nationalite)
+      html = html.replace('{nomC}', data.nom)
+      html = html.replace('{prenomC}', data.prenom)
       console.log(path.resolve("./htmls/logo.png"))
       html = html.replace('{LOGO}', path.resolve("./htmls/logo.png"))
       pdf.create(html, {

@@ -45,6 +45,11 @@ router.get('/contract/:id', (req, response) => {
       html = html.replace('{N}', data.nationalite)
       html = html.replace('{nomC}', data.nom)
       html = html.replace('{prenomC}', data.prenom)
+      if (data.civilite == 'Madame') {
+        html = html.replaceAll('{collab}','la Collaboratrice')
+      }else{
+        html = html.replaceAll('{collab}','le Collaborateur')
+      }
       console.log(path.resolve("./htmls/logo.png"))
       html = html.replace('{LOGO}', path.resolve("./htmls/logo.png"))
       pdf.create(html, {

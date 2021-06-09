@@ -3,146 +3,29 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+        <title>Liste contractant</title>
         <link rel="stylesheet" href="./bt/css/bootstrap.css">
-        <title>Formulaire contrat</title>
     </head>
     
     <body>
         <script src="./jquery.js"></script>
         <script src="./bt/js/bootstrap.js"></script>
-        <script src="./Recup-form.js"></script>
+        <script src="./Recup-liste-contrat.js"></script>
     
-       <h1>Generateur contrat de travail</h1>
-       <form>
+        <h1>Listes des contractants</h1>
 
-        <div class="container">
-            <div class ="form-group">
-                <div id="CVLT">
-                    <label for ="CVL" class="form-label">Civilité</label>
-                        <select class="form-select" id="CVL" aria-label="Default select example" required>
-                            <option selected disabled value="">Choisissez...</option>
-                            <option value="Monsieur">Monsieur</option>
-                            <option value="Madame">Madame</option>
-                    </select>
-                </div>
-            </div><br>    
-            
-            <div id ="name">
-                <div class ="form-group">
-                    <label for ="nom" class="form-label">Nom</label>
-                    <input type="text" class="form-control" id="nom" placeholder="Veuillez saisir votre nom" required> 
-                </div><br> 
-
-                <div class ="form-group">
-                    <div id="Pr">
-                        <label for ="Prénom" class="form-label">Prénom</label>
-                        <input type="text" class="form-control" id="prenom"placeholder="Veuillez saisir votre Prénom" required>
-                    </div>
-                </div><br>
-            </div><br>
-            
-            <div class ="form-group">
-                <label for ="AD" class="form-label">Adresse</label>
-                <input type="text" class="form-control" id="AD" placeholder="Veuillez saisir votre adresse" required>
-            </div><br>
-
-            <div class ="form-group">
-                <label for ="AD" class="form-label"></label>
-                <input type="text" class="form-control" id="CAD" placeholder="Complément d'adresse">
-            </div><br>
-
-            <div class ="form-group">
-                <div id="VL">
-                    <label for ="AD" class="form-label"></label>
-                    <input type="text" class="form-control" id="VL" placeholder="Ville" required>
-                </div>
+        
+          <div class="accordion">
+            <div class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 
-            </div><br>
-            
-            <div id="cpp">
-                <div class ="form-group">
-                    <label for ="AD" class="form-label"></label>
-                    <input type="text" class="form-control" id="CP" placeholder="Code Postal" required>
-                </div><br>
-
-                <div id="py">
-                    <div class ="form-group">
-                        <label for ="AD" class="form-label"></label>
-                        <input type="text" class="form-control" id="PY" placeholder="Pays" required>
-                    </div><br>
-                </div>    
-            </div> 
-                       
-            <div class ="form-group">
-                <label for ="DN" class="form-label">Date de naissance</label>
-                <input type="date" class="form-control" id="DN" placeholder="Veuillez saisir votre date de naissance" required>
-            </div><br>
-
-            <div class ="form-group">
-                <label for ="LN" class="form-label">Lieu de naissance</label>
-                <input type="text" class="form-control" id="LN" placeholder="Exemple Paris" required>
-            </div><br> 
-
-           <div id="dde">
-                <div class ="form-group">
-                    <label for ="DD" class="form-label">Date de demarrage</label>
-                    <input type="date" class="form-control" id="DD" placeholder="Veuillez saisir votre nom" required>
-                </div><br>
+              </button>
+            </div>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
                 
-                <div id="de">
-                    <div class ="form-group">
-                        <label for ="DE" class="form-label">Date d'édition</label>
-                        <input type="date" class="form-control" id="DE" placeholder="Veuillez saisir votre nom" required>
-                    </div><br>
-                </div>    
-           </div>
-
-           <div class ="form-group">
-                <label for ="NT" class="form-label">Nationalilté</label>
-                <input type="text" class="form-control" id="NT" placeholder="Exemple: France" required>
-           </div><br>
-           
-           <div class ="form-group">
-                <label for ="NS" class="form-label">N° Sécurité sociale</label>
-                <input type="text" class="form-control" id="NS" placeholder="Veuillez saisir votre n° de sécurité social" required>
-          </div><br><br>
-
-           <div class = "input-group form-group">
-                <span class="input-group-text">$</span>
-                <!--label for ="SB" class="form-label">Salaire brut</label-->
-                <input type="text" class="form-control" id="SB" aria-label="Amount (to the nearest dollar)" placeholder="Quel est votre salaire brut" required>
-           </div><br>
-          
-           <div class ="form-group">
-                <div id="STT">
-                    <label for ="ST" class="form-label">Statut</label>
-                    <select class="form-select" id="ST" aria-label="Default select example" required>
-                        <option selected disabled value="">Choisissez...</option>
-                        <option value="cadre">Cadre</option>
-                        <option value="non cadre">Non cadre</option>
-                    </select>
-                </div>    
-           </div><br>
-           
-           <div id="PC">
-                <div class ="form-group">
-                    <label for ="P" class="form-label">Position</label>
-                    <input type="text" class="form-control" id="P" placeholder="Veuillez saisir votre position" required>
-                </div><br>
-                
-                <div id="Coef">
-                    <div class ="form-group">
-                        <label for ="C" class="form-label">Coefficient</label>
-                        <input type="text" class="form-control" id="C" placeholder="Veuillez saisir votre coefficient" required>
-                    </div><br>
-                </div>
-            </div><br>
-           
-           <div id="button">
-                <span id="btn-s"><button class="btn btn-primary" >Soumettre</button></span>
-                <span id="btn-e"><button class="btn btn-danger" type="reset">Effacer</button></span>
-           </div>
-        </div> 
-       </form>
+              </div>
+            </div>
+          </div>
     </body>
 </html>

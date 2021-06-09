@@ -20,7 +20,7 @@ $(document).ready(function () {
         }
         console.log(contract);
 
-        var jqxhr = $.ajax("/contract", {
+         $.ajax("/contract", {
             type: "POST",
             data: JSON.stringify(contract),
             contentType:"application/json",

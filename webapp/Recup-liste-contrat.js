@@ -1,4 +1,4 @@
-fetch('http://contract.fact-/contract')
+fetch('http://contract.fact-it.fr/contract')
 .then(response => response.json())
 .then(contracts => {
     for (let i = 0; i < contracts.length; i++ ){
@@ -8,4 +8,6 @@ fetch('http://contract.fact-/contract')
         collectionItem.innerHTML += '<div data-id"' + contract.id + '"class="accordion-header">' + contract.prenom + '<br/>' + contract.nom + '</div>';
         collectionItem.innerHTML +='<div class="accordion-body">'+ contract.nom + '<br>' + contract.prenom +'</div>';
     }
+
+    
 });    

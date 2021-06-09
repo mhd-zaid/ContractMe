@@ -46,9 +46,9 @@ router.get('/contract/:id', (req, response) => {
       html = html.replace('{nomC}', data.nom)
       html = html.replace('{prenomC}', data.prenom)
       if (data.civilite == 'Madame') {
-        html = html.replace(g/'{collab}'/g,'la Collaboratrice')
+        html = html.replace(/{collab}/g,'la Collaboratrice')
       }else{
-        html = html.replace(g/'{collab}'/g,'le Collaborateur')
+        html = html.replace(/{collab}/g,'le Collaborateur')
       }
       console.log(path.resolve("./htmls/logo.png"))
       html = html.replace('{LOGO}', path.resolve("./htmls/logo.png"))

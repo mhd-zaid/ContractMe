@@ -27,7 +27,7 @@ $(document).ready(function () {
             dataType: 'json'
         })
             .done(function (data) {
-                window.location.href = "/contract/" + data.id;
+                window.location.href = "/";
             })
             .fail(function () {
                 alert("error");

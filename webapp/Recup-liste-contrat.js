@@ -1,3 +1,4 @@
+
 //Atendre le chargement du body avant de commencer
 window.onload = () => {
     const start = Date.now();

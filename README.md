@@ -2,6 +2,6 @@
 
 An employment contract generator
 
-#Demo
+# Demo
 http://contract.fact-it.fr/
 
